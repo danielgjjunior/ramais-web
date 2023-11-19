@@ -1,0 +1,18 @@
+.main{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.left{
+  width: 20%;
+  background-color: blue;
+  height: 100%;
+}
+
+.right{
+  width: 80%;
+  background-color: yellow;
+  height: 100%;
+}
+
