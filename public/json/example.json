@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "nome": "João Silva",
+      "setor": "TI",
+      "funcao": "Desenvolvedor",
+      "ramal": "1234",
+      "celularLoja": "987654321",
+      "celularParticular": "999888777",
+      "cidade": "São Paulo"
+    },
+    {
+      "id": 2,
+      "nome": "Maria Oliveira",
+      "setor": "RH",
+      "funcao": "Analista de Recursos Humanos",
+      "ramal": "5678",
+      "celularLoja": "123456789",
+      "celularParticular": null,
+      "cidade": "Rio de Janeiro"
+    },
+    {
+      "id": 3,
+      "nome": "Carlos Pereira",
+      "setor": "Vendas",
+      "funcao": "Vendedor",
+      "ramal": "4321",
+      "celularLoja": "987123456",
+      "celularParticular": "555444333",
+      "cidade": "Belo Horizonte"
+    }
+  ]
+  
