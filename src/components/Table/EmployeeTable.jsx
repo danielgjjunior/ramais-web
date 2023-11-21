@@ -3,14 +3,14 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Table.css'
 
-export default function EmployeeTable(){
+export default function EmployeeTable() {
   const [usuarios, setUsuarios] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('../../../public/json/example.json'); 
-        setUsuarios(response.data); 
+        const response = await axios.get('http://localhost:3000/funcionarios');
+        setUsuarios(response.data);
       } catch (error) {
         console.error('Erro ao buscar dados da API:', error);
       }
@@ -36,12 +36,15 @@ export default function EmployeeTable(){
         {usuarios.map((usuario) => (
           <tr key={usuario.id}>
             <td>{usuario.nome}</td>
-            <td>{usuario.setor}</td>
-            <td>{usuario.funcao}</td>
+            <td>{usuario.funcao.setor.nome}</td>
+            <td>{usuario.funcao.nome}</td>
             <td>{usuario.ramal}</td>
-            <td>{usuario.celularLoja}</td>
-            <td>{usuario.celularParticular || 'N/A'}</td>
-            <td>{usuario.cidade}</td>
+            <td>{usuario.telefone_corporativo || '-'}</td>
+            <td>{usuario.telefone_particular || '-'}</td>
+            <td>{usuario.cidade.nome}</td>
+            <td>
+              <button>Matricule-se</button>
+            </td>
           </tr>
         ))}
       </tbody>
